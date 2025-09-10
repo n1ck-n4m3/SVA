@@ -19,8 +19,8 @@ ARG DEBIAN_FRONTEND noninteractive
 #add neccessary apt repository
 RUN apt update
 RUN apt install gnupg wget -y
-RUN wget -qO - https://ose-repo.syslog-ng.com/apt/syslog-ng-ose-pub.asc | apt-key add -
-RUN echo "deb https://ose-repo.syslog-ng.com/apt/ stable ubuntu-noble" | tee -a /etc/apt/sources.list.d/syslog-ng-ose.list
+#RUN wget -qO - https://ose-repo.syslog-ng.com/apt/syslog-ng-ose-pub.asc | apt-key add -
+#RUN echo "deb https://ose-repo.syslog-ng.com/apt/ stable ubuntu-noble" | tee -a /etc/apt/sources.list.d/syslog-ng-ose.list
 RUN apt update
 
 RUN apt install xauth -y
